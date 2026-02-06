@@ -1,0 +1,348 @@
+.profile-card {
+    margin: 3rem auto 0 auto;
+    padding: 2rem 2.5rem;
+    max-width: 400px;
+    background: rgba(30, 32, 50, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: 'Manrope', Arial, sans-serif;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #229ED9;
+    margin-bottom: 1.2rem;
+    align-self: center;
+}
+
+.profile-username {
+    color: #229ED9;
+    font-size: 1.1em;
+    margin-bottom: 0.5rem;
+}
+
+.profile-id {
+    color: #aaa;
+    font-size: 0.95em;
+    margin-bottom: 1.2rem;
+}
+
+.profile-link {
+    color: #229ED9;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 1.2rem 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .profile-info-box {
+        padding: 20px;
+        color: white;
+        text-align: center;
+        margin: 2rem auto;
+        max-width: 90%
+    }
+
+    .profile-avatar {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+#profile-page-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.profile-info-box {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    min-width: 300px;
+    max-width: 400px
+}
+
+
+
+.profile-info-box,
+.subscription-box {
+    padding: 20px;
+    color: white;
+    max-width: 400px;
+    flex: 1 1 300px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.main-unbox {
+    background: rgba(30, 32, 50, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    margin: 2rem auto;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.profile-info-box h3,
+.subscription-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.profile-info-box p {
+    margin-bottom: 8px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.profile-content {
+    flex: 1;
+    /* padding-bottom is now handled by profile-container */
+    padding-bottom: 0;
+}
+
+.bottom-buttons-container {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+    margin: 0;
+}
+
+@media (min-width: 769px) {
+    .bottom-buttons-container {
+        flex-direction: row;
+    }
+
+    .bottom-buttons-container .state-btn {
+        flex: 1 1 50%;
+        width: auto;
+        margin: 0;
+    }
+}
+
+.logout-btn {
+    background: #dc3545;
+    flex-basis: 50%;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ref-btn {
+    flex-basis: 50%;
+}
+
+
+
+.logout-btn:hover {
+    background: #c82333;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+#logout-btn {
+    background: #c9302c;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.subscription-offer {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.subscription-offer h4 {
+    margin-top: 0;
+}
+
+.subscription-offer p {
+    margin-bottom: 15px;
+}
+
+.payment-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+#profile-subscription-head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+#subscription-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 0rem 0rem 1rem 0rem;
+    background-color: #007bff;
+    border: 1px solid rgb(88, 80, 61);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#subscription-icon[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 110%;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+#subscription-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.subscription-status-text {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background: rgba(30, 32, 50, 0.95);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    color: white;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.modal-content p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+.modal-close-btn {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+.state-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'ManropeReg', sans-serif;
+    transition: background 0.2s;
+}
+
+.state-btn:hover {
+    background: #0056b3;
+}

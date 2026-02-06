@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST3PCXJWWX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ST3PCXJWWX');
+    </script>
+    <link rel="stylesheet" href="/site/static/css/index.css?v=<%= new Date().getTime() %">
+    <link rel="stylesheet" href="/site/static/css/searchnft.css?v=<%= new Date().getTime() %">
+    <meta charset="UTF-8">
+    <title>look.tg | Поиск NFT </title>
+    <link rel="icon" href="/site/static/imgs/icon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js?v=2.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.3/build/player/lottie.min.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+
+<body>
+
+    <div id="all">
+
+        <button id="scroll-to-top">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+        </button>
+
+        <div class="header">
+
+            <header>
+                <button id="burger-menu" aria-label="Открыть меню">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" y1="7" x2="20" y2="7" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="17" x2="20" y2="17" />
+                    </svg>
+                </button>
+                <nav id="main-nav">
+
+                    <div class="searchnft hd">
+
+                        <a href="/searchnft" class="hd a no-underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                            <span data-lang="search_nft"></span>
+                        </a>
+
+                    </div>
+
+
+
+
+                    <div class="info hd">
+                        <a href="/info" class="hd a no-underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0zm-9-3.75h.008v.008H12V8.25z" />
+                            </svg>
+                            <span data-lang="info"></span>
+                        </a>
+                    </div>
+
+                    <div class="lang hd" id="lang-div">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                        </svg>
+                        <span data-lang="lang"></span>
+                    </div>
+                    <div class="profile hd">
+                        <a href="/profile" class="hd a no-underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+
+                            <span data-lang="profile">Профиль</span>
+                        </a>
+                    </div>
+
+
+                </nav>
+                <div id="mobile-menu" class="mobile-menu-hidden"></div>
+            </header>
+
+        </div>
+
+        <div class="searchbox">
+
+
+            <div class="nftpreview main-unbox">
+                <div class="viewBox">
+                    <div id="lottie-animation"></div>
+                    <div id="lottie-animation-pattern"></div>
+                    <span class="reg-font" id="gift-name-not-chosen"></span>
+                </div>
+            </div>
+
+            <div class="main-searchbox main-unbox">
+
+                <div class="searchtoolsbox">
+
+                    <div class="searchtoolshead">
+                        <span class="searchtoolsheadtext reg-font size-5" data-lang="search_nft"></span>
+                        <div id="sort-div">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
+                            </svg>
+                            <span class="reg-font" data-lang="sorting"></span>
+
+                            <div id="sort-selecting" style="display: none;">
+                                <div class="sort-section">
+                                    <label data-lang="sort_by"></label>
+                                    <div class="select-wrapper">
+                                        <select id="sort-param-select">
+                                            <option value="number" data-lang="sort_number"></option>
+                                            <option value="model_rarity" data-lang="sort_model_rarity"></option>
+                                            <option value="bg_rarity" data-lang="sort_bg_rarity"></option>
+                                            <option value="pattern_rarity" data-lang="sort_pattern_rarity"></option>
+                                            <option value="sale_price" data-lang="sort_price"></option>
+                                        </select>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="sort-section">
+                                    <label data-lang="sort_order"></label>
+                                    <div class="select-wrapper">
+                                        <select id="sort-order-select">
+                                            <option value="asc" data-lang="sort_asc"></option>
+                                            <option value="desc" data-lang="sort_desc"></option>
+                                        </select>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div id="accepting-sort-div">
+                                    <div id="clear-sort-btn" class="sort-bool">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18 18 6M6 6l12 12" />
+                                        </svg>
+                                        <span data-lang="reset"></span>
+                                    </div>
+                                    <div id="apply-sort-btn" class="sort-bool">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span data-lang="apply"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="searchtoolsfilter">
+                        <div class="searchtools name">
+                            <span class="searchtool name-text min-size" data-lang="gift"></span>
+                            <div id="name-list" class="name-list paramlist name">
+                                <span id='all-names' class="light-font grray" data-lang="all_gifts"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </div>
+
+
+
+                        <div class="searchtools model">
+                            <span class="searchtool model-text min-size" data-lang="model"></span>
+                            <div class="model-list paramlist model">
+                                <span id='all-models' class="light-font grray" data-lang="all_models"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="searchtools bg">
+                            <span class="searchtool bg-text min-size" data-lang="bg"></span>
+                            <div class="bg-list paramlist bg">
+                                <span id='all-bgs' class="light-font grray" data-lang="all_bgs"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="searchtools pattern">
+                            <span class="searchtool pattern-text min-size" data-lang="pattern"></span>
+                            <div class="pattern-list paramlist pattern">
+                                <span id='all-patterns' class="light-font grray" data-lang="all_patterns"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="searchtools selling-info">
+                            <span class="searhtool selling-info min-size" data-lang="marketplace"></span>
+                            <div class="selling-infos-inputs paramlist selling-info">
+                                <div id='all-selling-infos' class="light-font grray" data-lang="all_marketplaces">Все
+                                    маркетплейсы</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="searchtools owner-info">
+                            <span class="searhtool owner-info min-size" data-lang="owner"></span>
+                            <div class="owner-infos-inputs paramlist owner-info">
+                                <div id='all-owner-infos' class="light-font grray" data-lang="all_owners">Все владельцы
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="searctools-footer">
+
+                        <div class="dop-sorts">
+                            <div id="sort-selecting-div" class="nft-number-input-div number">
+                                <input type="text" autocomplete="off" autocorrect="off" spellcheck="false"
+                                    id="nft-number-input" data-lang-placeholder="gift_number">
+                            </div>
+                        </div>
+
+
+                        <div class="state-nft-gift">
+
+                            <div id="find-gifts-btn" class="state-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                </svg>
+                                <span class="light-font btn" data-lang="find"></span>
+                            </div>
+
+                            <div id="reset-filters" class="state-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                                <span class="light-font btn" data-lang="reset"></span>
+                            </div>
+
+                            <div id="find-random-nfts" class="state-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="size-6" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3z" />
+                                    <path
+                                        d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m4-4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                                </svg>
+
+                                <span class="light-font btn" data-lang="random"></span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div id="nft-gifts-main-box"></div>
+
+        <div id="footer"></div>
+
+
+
+
+    </div>
+
+    <script src="/site/static/js/tr.js?v=<%= new Date().getTime() %>"></script>
+    <script src="/site/static/js/se.js?v=<%= new Date().getTime() %" type="module"></script>
+    <script src="/site/static/js/he.js?v=<%= new Date().getTime() %" type="module"></script>
+
+</body>
+
+</html>

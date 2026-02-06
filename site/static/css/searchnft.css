@@ -1,0 +1,1968 @@
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+
+    0%,
+    100% {
+        box-shadow: .2em 0px 0 0px currentcolor;
+    }
+
+    12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+    }
+
+    25% {
+        box-shadow: 0 .2em 0 0px currentcolor;
+    }
+
+    37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+
+    50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+    }
+
+    62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+
+    75% {
+        box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+
+    87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+}
+
+
+.searctools-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.dop-sorts {
+    flex: 1;
+}
+
+
+
+#nft-number-input,
+.state-btn {
+    box-sizing: border-box;
+}
+
+
+.state-nft-gift {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+    border-radius: 8px;
+    cursor: default;
+    align-items: stretch;
+    flex: 1;
+}
+
+
+
+
+#lottie-animation {
+    height: 18vw;
+    min-width: 7rem;
+    min-height: 7rem;
+    display: none;
+}
+
+.viewBox {
+    align-self: center;
+}
+
+#sort-div {
+    background-color: #373751;
+    border-radius: 8px;
+    padding: 8px;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+#sort-div:hover:not(:has(#sort-selecting:hover)) {
+    cursor: pointer;
+    background-color: #4b4b64;
+    transition: background-color 0.3s ease;
+}
+
+
+#sort-selecting {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 5px;
+    background-color: hsl(244, 50%, 21%);
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 50%;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sort-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.sort-section label {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.sort-section select {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: hsl(244, 50%, 12%);
+    border: 1px solid hsl(244, 50%, 30%);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sort-section select:focus {
+    outline: none;
+    border-color: hsl(243, 54%, 52%);
+}
+
+#accepting-sort-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sort-bool {
+    flex: 1;
+    justify-content: center;
+}
+
+
+#sort-selecting-div:last-child {
+    border-bottom: none;
+}
+
+#sort-selecting-div input {
+    padding: 6px;
+    background-color: hsl(244, 42%, 26%);
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+
+
+#sort-selecting-div input::placeholder {
+    color: hsl(0, 0%, 94%);
+    opacity: 0.4;
+}
+
+#sort-selecting-criteries {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+
+#accepting-sort-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.sort-bool {
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.clear-sorts {
+    background-color: #b72323;
+}
+
+#apply-sort-btn {
+    background-color: hsl(243, 54%, 42%);
+}
+
+
+.main-searchbox {
+    width: 34rem;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    justify-content: space-evenly;
+    box-sizing: content-box;
+}
+
+.searchtoolsbox {
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    overflow: visible;
+    padding: 0.2rem 0;
+}
+
+
+.searchtoolsfilter {
+    display: grid;
+    grid-template-columns: repeat(2, 1.2fr);
+    grid-template-rows: repeat(3, 7rem);
+    gap: 2vw;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #090125;
+    color: #333;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.close-modal-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.searchbox,
+#nft-gifts-main-box,
+#profile-page-container {
+    animation: fadeIn 0.7s ease-out forwards;
+}
+
+.searchbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3rem;
+}
+
+
+#nft-gifts-main-box {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 3vh;
+}
+
+
+
+
+
+
+.searchtoolshead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchtools {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+
+
+.gift-item-list {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+
+.gift-search-input {
+    width: calc(100% - 16px);
+    border-radius: 7px;
+    margin: 8px;
+
+    padding: 8px;
+    border: none;
+    background-color: hsl(244, 50%, 15%);
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.gift-search-input::placeholder {
+    color: hsl(244, 50%, 50%);
+}
+
+
+
+
+
+.paramlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    background-color: hsl(244deg 68.36% 5.52%);
+    /* background-color: hsl(244, 50%, 21%); */
+    /* background-color: hsl(244, 68%, 15.5%); */
+    border-radius: 8px;
+    border: 1px solid rgb(61, 61, 77);
+    padding: 10px;
+    transition: all 0.4s ease-out;
+}
+
+.paramlist:hover {
+    background-color: hsl(244deg 68.36% 8.52%);
+}
+
+.paramlist.open {
+    z-index: 11;
+}
+
+
+
+
+
+.gift-item-undiv {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+}
+
+.gift-item-undiv span {
+    text-align: left;
+    padding-left: 1vw;
+}
+
+
+.gift-item-undiv:hover {
+    transition: background-color 0.2s ease;
+    background-color: hsl(244, 50%, 30%);
+}
+
+@media (max-width: 768px) {
+    .gift-item-undiv {
+        font-size: 1rem;
+        height: 6vh;
+    }
+
+    .gift-item-undiv span {
+        font-size: 1.3rem;
+    }
+}
+
+.gift-item-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #2b2b2b 0%, #3a3a3a 40%, #2b2b2b 80%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.gift-item-img.loaded {
+    animation: none;
+    background: none;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+
+.owner_username {
+    color: #00ceff;
+    border-bottom: 1px solid;
+    width: fit-content;
+}
+
+
+#find-nft-gifts {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: hsl(243, 54%, 42%);
+    border-radius: 8px;
+    width: fit-content;
+}
+
+
+.nftpreview {
+    background-color: #111827;
+    border-radius: 20px;
+    border: 1px solid #2c394e;
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 34rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.nftpreview span {
+    text-align: center;
+    width: 100%;
+}
+
+#loading-gifts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+
+    border: 1px solid hsl(244, 50%, 30%);
+    margin: 1rem 0.3rem 1rem 0.3rem;
+
+}
+
+
+
+#reset-filters {
+    background-color: #b72323;
+}
+
+
+.inputlist {
+    border: 2px solid none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+}
+
+
+.get-sub {
+    color: rgb(43, 216, 43);
+}
+
+.get-sub:hover {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.inputlist:hover {
+    cursor: pointer;
+}
+
+
+.gifts-not-found-span {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+
+
+.nft-res-box {
+    width: 100%;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.nft-res-div-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.nft-res-div-right-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.nft-gift-images-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 13rem));
+    gap: 12px;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.nft-gift-img-container {
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    aspect-ratio: 1/1;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    overflow: hidden;
+}
+
+.nft-gift-img-container:hover {
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.nft-gift-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.nft-gift-img-errored {
+    width: 63%;
+    height: 63%;
+    object-fit: cover;
+    align-self: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.gift-img-errored {
+    width: 7vh;
+    height: 7vh;
+}
+
+.card-gift-image {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 12px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.nft-gift-img.loaded {
+    opacity: 1;
+}
+
+
+.nft-gift-name {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 2px 8px;
+    border-radius: 5px;
+    width: 9rem;
+}
+
+.nft-gift-ribbon {
+    position: absolute;
+    top: 15px;
+    right: -115px;
+    left: 0px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 10px;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 10;
+}
+
+.nft-gift-ribbon-id {
+    position: absolute;
+    top: 10px;
+    right: auto;
+    left: 8px;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    transform: none;
+    box-shadow: none;
+    text-align: left;
+}
+
+
+
+.nft-gift-div-results.table {
+    transition: opacity 0.3s ease;
+}
+
+.nft-gift-div-results.image {
+    transition: opacity 0.3s ease;
+}
+
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+}
+
+.images-icon {
+    background-color: #53645e;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.nft-gift-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.pattern-overlay {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+.nft-gift-modal-ok-but {
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    background-color: hsl(243, 54%, 42%);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.nft-gift-modal-ok-but:hover {
+    background-color: hsl(243, 54%, 52%);
+    transition: background-color 0.3s ease;
+}
+
+.left-col {
+    background-color: #282847;
+}
+
+.right-col {
+    background-color: #323258;
+}
+
+.nft-gift-modal.show .nft-gift-modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.nft-gift-modal-content {
+    position: relative;
+    border-radius: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    min-width: 40vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: scale(0.95) translateY(20px);
+    opacity: 0;
+    overflow: hidden;
+}
+
+.nft-gift-modal-image-container {
+    text-align: center;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+
+.nft-gift-modal-image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 30;
+    backdrop-filter: blur(3px);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.nft-gift-modal-table {
+    background-color: #323258;
+    border-radius: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    overflow: hidden;
+}
+
+.nft-gift-modal-img {
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 10px;
+}
+
+.nft-gift-modal-info-div {
+    padding: 20px;
+    background-color: #131342;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 10px 10px;
+    gap: 10px;
+}
+
+.nft-gift-modal-info {
+    border-radius: 10px;
+    color: white;
+}
+
+.nft-gift-modal-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.nft-gift-modal-details p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+#scroll-to-top {
+    background-color: #1e00ff;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+#scroll-to-top.visible {
+    transform: translateY(0);
+    opacity: 1;
+    display: flex;
+}
+
+.gift-item-pattern-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 8px;
+}
+
+
+
+
+#swap-nft-view:hover {
+    cursor: pointer;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+}
+
+#swap-nft-view {
+    align-self: flex-end;
+    height: 24px;
+}
+
+
+
+
+
+
+.nft-gift-div-results {
+    width: 100%;
+    height: fit-content;
+}
+
+
+.nft-gift-field {
+    display: flex;
+}
+
+.nft-gift-div-results table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.nft-gift-results-thead {
+    background-color: rgb(74, 67, 104);
+    border-radius: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.selling-info-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 24px;
+    gap: 6px;
+    font-weight: bold;
+}
+
+
+.nft-gift-table-th-div {
+    display: flex;
+    align-items: center;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    justify-content: space-between;
+}
+
+.nft-gift-table-th {
+    padding: 10px;
+    border-bottom: 3px solid black;
+    transition: background-color 0.3s ease, color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+
+.nft-gift-table-th:hover {
+    background-color: rgb(108, 100, 144);
+    cursor: pointer;
+    border-bottom: 3px solid rgb(43, 216, 43);
+}
+
+.nft-gift-table-tr {
+    background-color: hsl(244, 50%, 21%);
+    transition: background-color 0.2s ease;
+    margin-bottom: 10px;
+}
+
+.nft-gift-table-tr:hover {
+    background-color: rgb(23, 53, 87);
+}
+
+
+.state-btn {
+    min-height: 28px;
+    cursor: pointer;
+    align-items: center;
+    padding: 0.3rem;
+    display: flex;
+    background-color: hsl(243, 54%, 42%);
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.state-btn:hover {
+    filter: brightness(90%);
+}
+
+#find-random-nfts {
+    background-color: black;
+}
+
+#find-random-nfts svg {
+    margin-right: 8px;
+
+}
+
+
+
+
+.gift-item-unbg {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.nft-gift-table-td-div {
+    align-self: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(63, 63, 63);
+}
+
+.nft-gift-table-td {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: center;
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.how-much-time-ago-text {
+    color: #999999;
+    font-size: 0.7rem;
+}
+
+.lottie-container {
+    width: auto;
+    height: 50vh;
+    position: relative;
+    z-index: 20;
+    transform: scale(0.7);
+    align-content: center;
+}
+
+.lottie-container:hover {
+    cursor: pointer;
+}
+
+
+
+
+#selling-infos div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#selling-infos div label {
+    cursor: pointer;
+}
+
+
+
+
+.mrkt-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 25px;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.lang-switcher {
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.model-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.model-disabled:hover {
+    transition: background-color 0.4s ease;
+    /* filter: brightness(50%); */
+    /* background-color: hsl(242, 18%, 35%); */
+}
+
+
+
+#clear-sort-btn {
+    align-items: center;
+    background-color: #b72323;
+}
+
+#apply-sort-btn {
+    align-items: center;
+}
+
+
+
+.selling-info-tr {
+    display: flex;
+    flex-direction: row;
+}
+
+.nft-gift-cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    align-self: center;
+}
+
+.nft-gift-card {
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: #131342;
+    margin-bottom: 5vh;
+}
+
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1vw;
+    align-items: center;
+}
+
+
+.card-texts {
+    width: 40%;
+    text-align: left;
+}
+
+.card-vals {
+    width: 40%;
+    text-align: right;
+}
+
+.card-row {
+    margin: 5px 0;
+}
+
+.card-gift-image {
+    margin: 0 auto;
+}
+
+
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px 7px 0 0;
+    padding: 0vw 2vw 0vw 2vw;
+}
+
+
+.gift-img {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10px;
+    display: block;
+}
+
+.filter-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1050;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.filter-modal-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.filter-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: hsl(244, 50%, 18%);
+    border: 1px solid hsl(244, 50%, 30%);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1051;
+    width: 90%;
+    max-width: 450px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-modal.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+.eyes-gif {
+    width: 4rem;
+    height: 4rem;
+}
+
+
+.filter-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid hsl(244, 50%, 30%);
+}
+
+.filter-modal-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: 'ManropeBold';
+}
+
+.filter-modal-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.market-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.filter-modal-close:hover {
+    opacity: 1;
+}
+
+.filter-modal-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 50vh;
+    overflow-y: auto;
+}
+
+.modal-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-input-group label {
+    font-size: 0.9rem;
+    color: #ccc;
+    font-family: 'ManropeReg';
+}
+
+.modal-input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: hsl(244, 50%, 12%);
+    border: 1px solid hsl(244, 50%, 30%);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.small-number {
+    font-size: 0.8rem;
+    margin-block-end: 0rem;
+    margin-block-start: 0.3rem;
+}
+
+.modal-input-group input::placeholder {
+    color: hsl(244, 50%, 40%);
+}
+
+.modal-checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+}
+
+.reffed-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.reffed-icon {
+    cursor: help;
+}
+
+.reffed-tooltip {
+    visibility: hidden;
+    width: 250px;
+    background-color: #96c5ce;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 9px;
+    position: absolute;
+    z-index: 1;
+    bottom: -4%;
+    left: 50%;
+    margin-left: 1vw;
+    font-size: 1rem;
+    height: 6vh;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.reffed-container:hover .reffed-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.not-for-sale {
+    color: white;
+    font-size: 13px;
+}
+
+.price-img-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+
+.price-img {
+    align-items: center;
+}
+
+.price {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.ton-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.modal-checkbox-group:hover {
+    background-color: hsl(244, 50%, 25%);
+}
+
+.modal-checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.modal-checkbox-group label {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.filter-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid hsl(244, 50%, 30%);
+}
+
+.filter-modal-apply-btn,
+.filter-modal-cancel-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: 'ManropeBold';
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.filter-modal-apply-btn {
+    background-color: hsl(243, 54%, 42%);
+    color: white;
+}
+
+.filter-modal-apply-btn:hover {
+    background-color: hsl(243, 54%, 52%);
+    transform: scale(1.03);
+}
+
+.filter-modal-cancel-btn {
+    background-color: #b72323;
+    color: white;
+}
+
+.filter-modal-cancel-btn:hover {
+    transform: scale(1.03);
+    background-color: #e02626;
+}
+
+
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.select-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 30px;
+}
+
+.select-wrapper svg {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 1px solid white;
+}
+
+.modal-control-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+}
+
+.modal-control-group .select-wrapper {
+    width: 60%;
+}
+
+.modal-control-group select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: hsl(244, 50%, 12%);
+    border: 1px solid hsl(244, 50%, 30%);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+}
+
+.custom-select-container {
+    position: relative;
+    width: 60%;
+}
+
+.custom-select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    background-color: hsl(244, 50%, 12%);
+    border: 1px solid hsl(244, 50%, 30%);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.custom-select-trigger .trigger-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.custom-select-trigger .trigger-content svg {
+    width: 20px;
+    height: 20px;
+}
+
+.custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: hsl(244, 50%, 18%);
+    border: 1px solid hsl(244, 50%, 30%);
+    border-radius: 8px;
+    margin-top: 4px;
+    z-index: 1060;
+    overflow-y: auto;
+    display: none;
+}
+
+.custom-options.open {
+    display: block;
+}
+
+.custom-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.custom-option:hover {
+    background-color: hsl(244, 50%, 25%);
+}
+
+.custom-option svg {
+    width: 20px;
+    height: 20px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4b4b64;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(14px);
+}
+
+@media (max-width: 900px) {
+    .searchbox {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #nft-gifts-main-box {
+        margin-bottom: 1rem;
+        margin-top: -2rem;
+    }
+}
+
+
+.paramlist.open .dropdown-list {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-list {
+    margin-top: 1rem;
+    padding-right: 1px;
+    scroll-behavior: smooth;
+    background-color: hsl(244, 50%, 21%);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: -1px;
+    right: 0;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+    border: 1px solid black;
+}
+
+/* .paramlist:hover .dropdown-list {
+    filter: brightness(0.67);
+} */
+
+/* .dropdown-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-list::-webkit-scrollbar:hover {
+    cursor: default;
+}
+
+
+.dropdown-list::-webkit-scrollbar-thumb {
+    background-color: #a23838;
+    border-radius: 4px;
+} */
+
+.refunded-gift {
+    color: black;
+    font-size: 0.8rem;
+}
+
+
+
+
+.selling-info-div {
+    display: flex;
+    background-color: hsl(243, 54%, 42%);
+    align-items: center;
+    border-radius: 7px;
+    padding: 0.4rem;
+    justify-content: space-between;
+    width: 100%;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.selling-info-for-images-view {
+    display: flex;
+    background-color: hsl(243, 54%, 42%);
+    align-items: center;
+    border-radius: 7px;
+    padding: 0.4rem;
+    justify-content: space-between;
+}
+
+
+.selling-info-div:hover {
+    background-color: hsl(243, 54%, 52%);
+}
+
+.dropdown-loading {
+    padding: 3px;
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+    .dop-sorts input {
+        width: 100%;
+    }
+
+    .searctools-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dropdown-list {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-height: 80vh;
+        background-color: hsl(244, 50%, 18%);
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        border-top: 1px solid hsl(244, 50%, 30%);
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        overflow-y: auto;
+        z-index: 1000;
+        transform: translateY(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .selling-info-div {
+        width: fit-content;
+        margin: auto 0 auto auto;
+        min-width: 22vw;
+    }
+
+    .dropdown-list::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background-color: hsl(244, 50%, 50%);
+        border-radius: 2px;
+        opacity: 0.6;
+    }
+
+    .paramlist.open .dropdown-list,
+    .dropdown-list.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .dropdown-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .nft-res-box {
+        width: 97%;
+        border: 2px solid gray;
+        border-radius: 10px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin: 1rem 0px 1rem 0.3rem;
+    }
+
+
+
+    .dropdown-overlay.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* .dropdown-list::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+
+    .dropdown-list::-webkit-scrollbar:hover {
+        cursor: none;
+    }
+
+    .dropdown-list::-webkit-scrollbar-thumb {
+        background: transparent;
+    } */
+
+    .dropdown-list {
+        scrollbar-width: none;
+        scrollbar-color: transparent transparent;
+    }
+
+    .state-nft-gift {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+
+    .dropdown-list.closing {
+        transform: translateY(100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nft-gift-images-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .gift-search-input {
+        height: 3.5rem;
+        margin: 1.5rem 0rem 1rem 0.5rem;
+    }
+
+    .nft-gift-img-container {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .nft-gift-img,
+    .nft-gift-img-errored {
+        object-fit: cover;
+    }
+
+    .nft-gift-name {
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+        right: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        color: white !important;
+        padding: 4px 8px;
+        border-radius: 6px;
+        backdrop-filter: blur(10px);
+        transform: none;
+        width: auto;
+    }
+
+    .nft-gift-ribbon {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        left: auto;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 11px;
+        font-weight: bold;
+        transform: none;
+        box-shadow: none;
+        text-align: left;
+    }
+}
+
+.selling-info-bottom {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.selling-info-bottom .market-icon {
+    width: 24px;
+    height: 24px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+.selling-info-bottom .price-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 15px;
+    background-color: rgba(155, 155, 155, 0.3);
+}
+
+.selling-info-bottom .price-container :hover {
+    background-color: rgba(155, 155, 155, 0.4);
+}
+
+
+.auth-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.auth-modal-overlay.show {
+    opacity: 1;
+}
+
+.auth-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 380px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.auth-modal.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.auth-modal h3 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    color: #59c7f9;
+    text-align: center;
+    font-weight: 600;
+}
+
+.auth-modal p {
+    margin: 0 0 1.5rem;
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.auth-modal .login-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background: #0088cc;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.2s ease;
+}
+
+.auth-modal .login-btn:hover {
+    background: #006fa3;
+}
+
+.auth-modal .login-btn img {
+    width: 22px;
+    height: 22px;
+}
+
+@media (max-width: 480px) {
+    .auth-modal {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .auth-modal h3 {
+        font-size: 1.3rem;
+    }
+}

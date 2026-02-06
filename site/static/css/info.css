@@ -1,0 +1,226 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-main-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.info-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'ManropeBold';
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.info-main-box>div {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.info-main-box>div:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.info-main-box>div:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.info-main-box>div:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.info-main-box>div:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.info-main-box>div:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.deploy {
+    background-color: hsl(244, 50%, 18%);
+    border-radius: 12px;
+    border: 1px solid hsl(244, 50%, 30%);
+    transition: all 0.3s ease;
+    grid-column: 1 / -1;
+}
+
+.deploy:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-color: hsl(244, 50%, 45%);
+}
+
+.deploy-header svg {
+    transition: transform 0.3s ease;
+    color: #aab4c4;
+}
+
+.deploy-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+}
+
+.deploy-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.deploy-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    padding: 0 1.5rem;
+    color: #c5cde0;
+    font-family: 'ManropeReg';
+    cursor: default;
+}
+
+.deploy.open .deploy-content {
+    padding: 0 1.5rem 1.2rem 1.5rem;
+}
+
+.deploy-content p,
+.deploy-content span {
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+}
+
+.deploy-content ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.deploy-content li {
+    margin-bottom: 8px;
+}
+
+.deploy-content a {
+    color: #63a2ff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.deploy-content a:hover {
+    color: #89bfff;
+    text-decoration: underline;
+}
+
+#as {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.connect {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid hsl(244, 50%, 30%);
+}
+
+.connect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-color: hsl(244, 50%, 45%);
+}
+
+.tgk {
+    background-color: hsl(244, 50%, 18%);
+}
+
+.tgk:hover {
+    background-color: hsl(244, 50%, 22%);
+}
+
+.subbut {
+    flex-grow: 1;
+    text-align: center;
+    background-color: hsl(210, 80%, 55%);
+    border-radius: 8px;
+    color: white;
+    padding: 0.7rem 1rem;
+    font-family: 'ManropeBold';
+    transition: all 0.2s ease;
+}
+
+.subbut:hover {
+    background-color: hsl(210, 80%, 65%);
+    transform: scale(1.02);
+}
+
+.infoicon-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+.infoicon-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid hsl(244, 50%, 30%);
+}
+
+.infoicon-header h3 {
+    margin: 0;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .info-main-box {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .info-title {
+        font-size: 2rem;
+    }
+
+    .deploy-header h3 {
+        font-size: 1rem;
+    }
+
+    .deploy-content {
+        font-size: 0.9rem;
+    }
+}
+
+.info-main-box {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
